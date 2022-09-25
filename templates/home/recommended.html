@@ -1,0 +1,18 @@
+{% if recommended %}
+  <h5 class="text-center text-white mb-4 mt-4">Nuestras recomendaciones</h5>
+  <div class="row">
+    {% for option in recommended %}
+      <div class="col-12 col-xl-3 col-md-6 col-sm-12 mb-3">
+        <div class="card bg-dark text-white mb-3">
+          <div class="card-body d-flex flex-column">
+            <div class="d-flex">
+              <h5>{{option.name}}</h5>
+              <h5 class="mt-auto ms-auto">${{option.price}}</h5>
+            </div>
+            <p class="text-muted mt-auto mb-auto">{{option.description}}</p>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}
