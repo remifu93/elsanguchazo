@@ -18,9 +18,9 @@
             <div class="card-body d-flex flex-column">
             <div class="d-flex">
                 {% if request.GET.lang == 'en' %}
-                    <h5>{{option.name_en}}</h5>
+                    {{option.name_en}}
                 {% else %}
-                    <h5>{{option.name}}</h5>
+                    {{option.name}}
                 {% endif %}
                 <h5 class="mt-auto ms-auto">${{option.price}}</h5>
             </div>
