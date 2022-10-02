@@ -3,7 +3,8 @@ from django.db import models
 
 
 class Category(models.Model):
-    name = models.CharField('Nombre', max_length=50)
+    name = models.CharField('Nombre', max_length=100)
+    name_en = models.CharField('Name', max_length=100, blank=True, null=True)
     image = models.ImageField('Imagen', upload_to='category', blank=True, null=True)
 
     class Meta:
@@ -11,4 +12,4 @@ class Category(models.Model):
         verbose_name_plural = "Categorias"
 
     def __str__(self):
-        return self.name
+        return f'{self.name} - {self.name_en}'

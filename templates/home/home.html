@@ -1,6 +1,15 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %}
+    
+{% block content %}
 
-{% include 'home/category.html' %}
-{% include 'home/recommended.html' %}
-  
+<div class='row'>
+    <p class="text-white text-center mt-5">Selecciona un idioma - Select a language</p>
+    <div class="col-xl-6 col-md-6 col-sm-12 col-xs-12">
+        <a class='btn btn-xl btn-success w-100 mt-3' href="{% url 'menu' %}?lang=en">Ingles</a>
+    </div>
+    <div class="col-xl-6 col-md-6 col-sm-12 col-xs-12">
+        <a class='btn btn-xl btn-success w-100 mt-4' href="{% url 'menu' %}?lang=es">Español</a>
+    </div>
+</div>
+
 {% endblock content %}
